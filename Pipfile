@@ -1,0 +1,17 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[packages]
+chainer = "~=6.5"
+numpy = "~=1.18"
+matplotlib = "~=3.2"
+pandas = "~=1.0"
+scikit-learn = "~=0.22"
+
+[dev-packages]
+jupyterlab = "~=2.1"
+
+[requires]
+python_version = "3.7"
