@@ -1,7 +1,5 @@
 # Python tutorials
 
-[![License](https://img.shields.io/badge/license-BSD%203--Clause-blue.svg?label=License&style=flat-square)](LICENSE)
-
 :beginner: Python tutorials based on chainer/tutorials (https://tutorials.chainer.org)
 
 ## Notebooks
