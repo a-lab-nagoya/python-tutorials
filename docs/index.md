@@ -82,7 +82,7 @@ import openai
 openai.api_key = "*****"
 
 def answer(question: str) -> str:
-    """Return an answer of the question by GPT-3.5."""
+    """Return the answer to a given question by GPT-3.5."""
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
         messages=[{"role": "user", "content": question}],
