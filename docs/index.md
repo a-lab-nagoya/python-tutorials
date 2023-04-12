@@ -5,14 +5,12 @@ paginate: true
 backgroundImage: url('https://marp.app/assets/hero-background.jpg')
 ---
 
-## Introduction to the programming language "Python" in radio astronomy
+# Introduction to the programming language Python in radio astronomy
 
-- 2020-05-13 / Python tutorials
-- Presented by Akio Taniguchi
-    - A-lab postdoc (Tamura group)
-    - a.k.a. [astropenguin](https://github.com/astropenguin)
+- 2023-04-13 @ Python tutorials #1
+- Presented by: Akio Taniguchi (Tamura group)
 
-![bg right:30% 75%](https://openastronomy.org/pyastro/images/pyastro_logo_150px.png)
+![bg right:25% 75%](https://openastronomy.org/pyastro/images/pyastro_logo_150px.png)
 
 ---
 
@@ -26,13 +24,6 @@ backgroundImage: url('https://marp.app/assets/hero-background.jpg')
     - 公式の機能・ドキュメントを知る癖をつけよう
     - 他者への技術的な思いやりを持った開発をしよう
     - 「分からないこと」はどんどん質問をしよう
-
----
-
-# Contents
-
-- 本日の課題：[Chainer tutorials](https://github.com/a-lab-nagoya/python-tutorials) 01をGoogle colabで実行しよう
-- 天文学のデータ形式（FITS）について（立原さん）
 
 ---
 
@@ -68,7 +59,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.jpg')
 # プログラミング言語Python
 
 - 特徴
-    - 高水準の汎用スクリプト言語
+    - 高水準の汎用スクリプト言語（オブジェクト指向言語）
     - シンプルで習得しやすい文法とデータ構造
     - 豊富な標準ライブラリ（battery included）
     - 科学用途の豊富な外部ライブラリ
@@ -106,14 +97,14 @@ root.mainloop()
 
 # プログラミング言語Python
 
-- 2020年5月時点でのPython
-    - 最新バージョン：[3.8](https://docs.python.org/ja/3/)（2020年10月に[3.9がリリース予定](https://www.python.org/dev/peps/pep-0596)）
-    - Google colabでは3.6が使われている
-    - これから始めるなら最新バージョンを使いましょう
+- 2023年4月時点でのPython
+    - 最新バージョン：[3.11](https://docs.python.org/ja/3.11/)（2023年10月に[3.12がリリース予定](https://peps.python.org/pep-0693/)）
+    - Google Colaboratoryでは[3.9が採用されている](https://colab.research.google.com/notebooks/relnotes.ipynb#scrollTo=nsyNmf0OSEPc)
+    - これから始めるなら3.9以上を使いましょう
 - 参考：バージョン2.x系のPython
     - 3.x系とは文法等が互換ではないことに注意
         - 例：`3/2 -> 1` (2.x), `3/2 -> 1.5` (3.x)
-    - [CASA](http://casa.nrao.edu/)など一部の天文ソフトウェアで使用中
+    - [CASA](http://casa.nrao.edu/)など一部の天文ソフトウェアで必要になることも
 
 ---
 
@@ -126,7 +117,7 @@ root.mainloop()
 - 可視化ライブラリ
     - Matplotlib: 1-2次元データプロット
 - その他
-    - Jupyter notebook/lab: ブラウザベースのPython対話実行環境
+    - Jupyter: ブラウザ+ノートブックのPython対話実行環境
 
 ---
 
@@ -149,9 +140,9 @@ root.mainloop()
     - 文字列操作など、かえってシンプルに書きづらいことも
 - 外部ライブラリが使えないかを検討する
     - 例えばNumPyの配列計算は高速な科学計算では必須
-- 最適な他のプログラミング言語を検討する（やり過ぎない程度で）
+- 最適な他のプログラミング言語を検討する
     - 例えばウェブ関連の開発ならJavaScriptなど
-    - データの入出力ならデータ記述言語など
+    - （ただし、学習コスト・引継ぎコストと要相談）
 
 ---
 
@@ -160,11 +151,11 @@ root.mainloop()
 - シェルスクリプト（UNIXコマンド）の理解も大事
     - パイプライン：簡潔なデータ連続処理
     - 正規表現：効率的な文字列検索
-- 一般的なデータ構造を知っておく
-    - オレオレデータ形式を作らないようにしましょう
-    - FITS（天文）, netCDF: 多次元配列
+- よく使われる一般的なデータ形式を知っておく
+    - FITS, netCDF: 多次元配列
     - JSON, YAML, TOML: データ記述言語
     - CSV: 表形式
+    - オリジナルのデータ形式は極力作らないようにしましょう
 
 ---
 
@@ -192,10 +183,10 @@ root.mainloop()
     - Pythonには[標準の書き方の指針](https://pep8-ja.readthedocs.io/ja/latest/)がある
     - Pythonicな文法を使いこなす（例えばイテレータ）
 - 可読性の高いコードの書き方を理解する
-    - コードを複雑にしない書き方（例えばguard clause）
+    - コードを複雑にしない書き方（例えば早期リターン）
     - 変数の命名方法（例えば`end`と`last`はどっちを使うべき？）
 - ドキュメントを残す（例えば[Azely](https://github.com/astropenguin/azely)のdocstrings）
-- 重要：ここでいう他者には「数ヶ月後の自分」も含まれます
+- **重要：ここでいう他者には「数ヶ月後の自分」も含まれます**
 
 ---
 
@@ -218,8 +209,8 @@ root.mainloop()
     - [Python 標準ライブラリ](https://docs.python.org/ja/3/library/index.html)
     - [Python コードのスタイルガイド](https://pep8-ja.readthedocs.io/ja/latest/)
 - Python books
-    - [みんなのPython 第4版]( https://www.amazon.co.jp/dp/479738946X/ref=cm_sw_em_r_mt_dp_U_PYpUDbJYW9JRW)
-    - [入門 Python 3](https://www.amazon.co.jp/dp/4873117380/ref=cm_sw_em_r_mt_dp_U_SYpUDbSDGBN6D)
+    - [これから学ぶPython（初版）](https://amzn.asia/d/8jxRQsO)→今回使うテキスト
+    - [入門 Python 3（第2版）](https://amzn.asia/d/apjIPL9)
     - [科学技術計算のためのPython入門](https://www.amazon.co.jp/dp/4774183881/ref=cm_sw_r_tw_dp_U_x_k0TUEbVANHNQMj)
     - （自分が読みやすいものなら正直何でも良いので1冊通読）
 
