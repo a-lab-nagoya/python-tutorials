@@ -77,20 +77,20 @@ backgroundImage: url('https://marp.app/assets/hero-background.jpg')
 # プログラミング言語Python
 
 ```python
-import tkinter as tk
-from datetime import datetime as dt
+import openai
 
-root = tk.Tk()
-clock = tk.StringVar()
-label = tk.Label(textvariable=clock)
-label.pack()
+openai.api_key = "*****"
 
-def update():
-    clock.set(dt.now().strftime('%H:%M:%S'))
-    root.after(1000, update)
+def answer(question: str) -> str:
+    """Return an answer of the question by GPT-3.5."""
+    response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+        messages=[{"role": "user", "content": question}],
+    )
+    return response["choices"][0]["message"]["content"]
 
-update()
-root.mainloop()
+
+print(answer("Pythonを学ぶには？"))
 ```
 
 ---
