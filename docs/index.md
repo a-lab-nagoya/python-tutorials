@@ -79,7 +79,6 @@ backgroundImage: url('https://marp.app/assets/hero-background.jpg')
 ```python
 import openai
 
-openai.api_key = "*****"
 
 def answer(question: str) -> str:
     """Return the answer to a given question by GPT-3.5."""
@@ -90,6 +89,7 @@ def answer(question: str) -> str:
     return response["choices"][0]["message"]["content"]
 
 
+openai.api_key = "*****"
 print(answer("Pythonを学ぶには？"))
 ```
 
