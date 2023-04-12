@@ -1,0 +1,22 @@
+{
+    "name": "python-tutorials",
+    "image": "alpine/git:latest",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "github.vscode-pull-request-github",
+                "marp-team.marp-vscode",
+                "mhutchie.git-graph",
+                "streetsidesoftware.code-spell-checker"
+            ],
+            "settings": {
+                "files.insertFinalNewline": true,
+                "files.trimTrailingWhitespace": true,
+                "[markdown]": {
+                    "editor.insertSpaces": true,
+                    "editor.wordWrap": "on"
+                }
+            }
+        }
+    }
+}

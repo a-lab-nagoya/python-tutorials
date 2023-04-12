@@ -1,0 +1,26 @@
+name: GitHub Pages
+
+on:
+  release:
+    types:
+      - created
+
+jobs:
+  job:
+    name: GitHub Pages
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: echo "::set-output name=tag::${GITHUB_REF##*/}"
+        id: tag
+      - uses: docker://marpteam/marp-cli:latest
+        with:
+          args: docs/index.md -o docs/index.html
+        env:
+          MARP_USER: root:root
+      - uses: peaceiris/actions-gh-pages@v3
+        with:
+          destination_dir: ${{ steps.tag.outputs.tag }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: docs
