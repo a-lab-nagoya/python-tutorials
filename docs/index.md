@@ -208,8 +208,8 @@ print(answer("Pythonを学ぶには？"))
     - [Python 標準ライブラリ](https://docs.python.org/ja/3/library/index.html)
     - [Python コードのスタイルガイド](https://pep8-ja.readthedocs.io/ja/latest/)
 - Python books
-    - [これから学ぶPython（初版）](https://amzn.asia/d/8jxRQsO)→今回使うテキスト
-    - [入門 Python 3（第2版）](https://amzn.asia/d/apjIPL9)
+    - [スッキリわかるPython入門 第2版](https://amzn.asia/d/c03aweb)→今回使うテキスト
+    - [Python ゼロからはじめるプログラミング](https://amzn.asia/d/39Ysilv)
     - [科学技術計算のためのPython入門](https://www.amazon.co.jp/dp/4774183881/ref=cm_sw_r_tw_dp_U_x_k0TUEbVANHNQMj)
     - （自分が読みやすいものなら正直何でも良いので1冊通読）
 
