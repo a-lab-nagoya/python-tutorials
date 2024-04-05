@@ -7,7 +7,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.jpg')
 
 # Introduction to the programming language Python in radio astronomy
 
-- 2023-04-13 @ Python tutorials #1
+- 2024-04-08 @ Python tutorials #0
 - Presented by: Akio Taniguchi (Tamura group)
 
 ![bg right:25% 75%](https://openastronomy.org/pyastro/images/pyastro_logo_150px.png)
@@ -97,10 +97,10 @@ print(answer("Pythonを学ぶには？"))
 
 # プログラミング言語Python
 
-- 2023年4月時点でのPython
-    - 最新バージョン：[3.11](https://docs.python.org/ja/3.11/)（2023年10月に[3.12がリリース予定](https://peps.python.org/pep-0693/)）
-    - Google Colaboratoryでは[3.9が採用されている](https://colab.research.google.com/notebooks/relnotes.ipynb#scrollTo=nsyNmf0OSEPc)
-    - これから始めるなら3.9以上を使いましょう
+- 2024年4月時点でのPython
+    - 最新バージョン：[3.12](https://docs.python.org/ja/3.12/)（2024年10月に[3.13がリリース予定](https://peps.python.org/pep-0719/)）
+    - Google Colaboratoryでは[3.10が採用されている](https://colab.research.google.com/notebooks/relnotes.ipynb)
+    - これから始めるなら3.10以上を使いましょう
 - 参考：バージョン2.x系のPython
     - 3.x系とは文法等が互換ではないことに注意
         - 例：`3/2 -> 1` (2.x), `3/2 -> 1.5` (3.x)
