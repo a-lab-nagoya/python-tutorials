@@ -7,7 +7,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.jpg')
 
 # Introduction to the programming language Python in radio astronomy
 
-- 2023-04-13 @ Python tutorials #1
+- 2024-04-08 @ Python tutorials #0
 - Presented by: Akio Taniguchi (Tamura group)
 
 ![bg right:25% 75%](https://openastronomy.org/pyastro/images/pyastro_logo_150px.png)
@@ -86,7 +86,7 @@ def answer(question: str) -> str:
         model="gpt-3.5-turbo",
         messages=[{"role": "user", "content": question}],
     )
-    return response["choices"][0]["message"]["content"]
+    return response.choices[0].text
 
 
 openai.api_key = "*****"
@@ -97,10 +97,10 @@ print(answer("Pythonを学ぶには？"))
 
 # プログラミング言語Python
 
-- 2023年4月時点でのPython
-    - 最新バージョン：[3.11](https://docs.python.org/ja/3.11/)（2023年10月に[3.12がリリース予定](https://peps.python.org/pep-0693/)）
-    - Google Colaboratoryでは[3.9が採用されている](https://colab.research.google.com/notebooks/relnotes.ipynb#scrollTo=nsyNmf0OSEPc)
-    - これから始めるなら3.9以上を使いましょう
+- 2024年4月時点でのPython
+    - 最新バージョン：[3.12](https://docs.python.org/ja/3.12/)（2024年10月に[3.13がリリース予定](https://peps.python.org/pep-0719/)）
+    - Google Colaboratoryでは[3.10が採用されている](https://colab.research.google.com/notebooks/relnotes.ipynb)
+    - これから始めるなら3.10以上を使いましょう
 - 参考：バージョン2.x系のPython
     - 3.x系とは文法等が互換ではないことに注意
         - 例：`3/2 -> 1` (2.x), `3/2 -> 1.5` (3.x)
@@ -208,8 +208,8 @@ print(answer("Pythonを学ぶには？"))
     - [Python 標準ライブラリ](https://docs.python.org/ja/3/library/index.html)
     - [Python コードのスタイルガイド](https://pep8-ja.readthedocs.io/ja/latest/)
 - Python books
-    - [これから学ぶPython（初版）](https://amzn.asia/d/8jxRQsO)→今回使うテキスト
-    - [入門 Python 3（第2版）](https://amzn.asia/d/apjIPL9)
+    - [スッキリわかるPython入門 第2版](https://amzn.asia/d/c03aweb)→今回使うテキスト
+    - [Python ゼロからはじめるプログラミング](https://amzn.asia/d/39Ysilv)
     - [科学技術計算のためのPython入門](https://www.amazon.co.jp/dp/4774183881/ref=cm_sw_r_tw_dp_U_x_k0TUEbVANHNQMj)
     - （自分が読みやすいものなら正直何でも良いので1冊通読）
 
